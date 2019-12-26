@@ -1,0 +1,409 @@
+body {
+    background: #404347;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: #f7f7f7;
+}
+
+#inputRechercher {
+    width: 220px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 22px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#inputRechercher:focus {
+    width: 30%;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 30px;
+    border-radius: 8px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    background: rgb(204, 202, 202);
+    margin: 0;
+    font-family: inherit;
+    font-size: 30px;
+    line-height: inherit;
+    text-align: center;
+}
+
+form {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+tr {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 60px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.btn-Valider {
+    color: #272B30;
+    background-color: #409240;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.btn-Edit {
+    color: #272B30;
+    background-color: #374b8d;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.btn-Supp {
+    color: #272B30;
+    background-color: #b93232;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.btn-Modif {
+    color: #272B30;
+    background-color: #b8872b;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.border {
+    border: 3px double #f1f0f0;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col,
+.col-auto,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm,
+.col-sm-auto,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md,
+.col-md-auto,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg,
+.col-lg-auto,
+.col-xl-1,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl,
+.col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.modalDialogValider {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialogValider:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialogValider>div {
+    width: 500px;
+    position: auto;
+    margin: 10% auto;
+    padding: 20px 20px 30px 20px;
+    border-radius: 8px;
+    background: #409240;
+    background: -moz-linear-gradient(#fff, #409240);
+    background: -webkit-linear-gradient(#fff, #409240);
+    background: -o-linear-gradient(#fff, #409240);
+}
+
+.modalDialogModif {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialogModif:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialogModif>div {
+    width: 500px;
+    position: auto;
+    margin: 10% auto;
+    padding: 20px 20px 30px 20px;
+    border-radius: 8px;
+    background: #b8872b;
+    background: -moz-linear-gradient(#fff, #b8872b);
+    background: -webkit-linear-gradient(#fff, #b8872b);
+    background: -o-linear-gradient(#fff, #b8872b);
+}
+
+.modalDialogEdit {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    transition-duration: 3000;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialogEdit:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialogEdit>div {
+    width: 1300px;
+    position: auto;
+    margin: 10% auto;
+    padding: 20px 20px 30px 20px;
+    border-radius: 8px;
+    background: #474747;
+    background: -moz-linear-gradient(#fff, #474747);
+    background: -webkit-linear-gradient(#fff, #474747);
+    background: -o-linear-gradient(#fff, #474747);
+}
+
+.modalDialogSupp {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    transition-duration: 3000;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialogSupp:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialogSupp>div {
+    width: 500px;
+    position: auto;
+    margin: 10% auto;
+    padding: 20px 20px 30px 20px;
+    border-radius: 8px;
+    background: #b93232;
+    background: -moz-linear-gradient(#fff, #b93232);
+    background: -webkit-linear-gradient(#fff, #b93232);
+    background: -o-linear-gradient(#fff, #b93232);
+}
+
+.close {
+    background: #b93232;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #FFFFFF;
+    line-height: 30px;
+    text-align: center;
+    float: right;
+    width: 112px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    background: #7c1f1f;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-bottom: 20px solid #8888e8;
+}
+
+.arrow-up:hover {
+    border-bottom: 20px solid #242492;
+}
+
+.arrow-up::after {
+    border-bottom: 20px solid #242492;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-right: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-top: 20px solid #8888e8;
+}
+
+.arrow-down:hover {
+    border-top: 20px solid #242492;
+}
+
+.arrow-down::after {
+    border-top: 20px solid #242492;
+}
+
+.arrow-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px 20px;
+}
+
+input:invalid {
+    border-color: #b61515;
+    background-color: #fbb7b7;
+}
+
+input:valid {
+    border-color: #409240;
+    background-color:#c7fbb7;
+}
+
+input {
+    border-radius: 8px;
+    width: 408px;
+}
+
+.modaVideo {
+    z-index: 3;
+    display: none;
+    padding-top: 5%;
+    padding-left: 5%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(51, 34, 34);
+    background-color: rgba(0, 0, 0, 0.4)
+  }

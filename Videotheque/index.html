@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="app.css">
+
+    <title>Médiatèque</title>
+
+</head>
+
+
+<body>
+    <div class="container col-lg-12 ">
+
+        <div style="text-align: center;">
+            <h1><strong> Ma Vidéothèque</strong></h1>
+        </div>
+        <br>
+        <form>
+            <div style="text-align: center;">
+                <input id="inputRechercher" type="text" name="search" onkeyup="rechercherDansMediatheque()"
+                    placeholder="Rechercher...">
+            </div>
+        </form>
+        <br>
+        <div style="text-align: right; padding-right: 17%;" id="ajouter1">
+            <button type="button" name="Ajouter" onclick="showAdd()" class="btn-Valider">Ajouter</button>
+        </div>
+        <form action="">
+            <div id="AjouterFilm" style="display: none ; text-align: center;">
+
+                <input id="titre" type="text" name="titre" placeholder="Titre du film" required minlength="1"
+                    maxlength="25" />
+                <input id="annee" type="number" name="annee" placeholder="Année du film" required min="1900"
+                    max="2019" />
+                <input id="auteur" type="text" name="auteur" placeholder="Auteur du film" required minlength="5"
+                    maxlength="20" />
+                <button type="button" name="button" onclick="requisAjout('titre','annee','auteur')"
+                    class="btn-Valider">Ajouter</button>
+                <button type="button" name="button" onclick="removeAdd()" class="btn-Supp">Annuler</button>
+            </div>
+        </form>
+        <br>
+        <br>
+
+        <div id="films" style="margin-left: 20px;"></div>
+    </div>
+    <br>
+    <div id="openModalVerif" class="modalDialogValider">
+        <div>
+            <a href="#close" title="Close" class="close">Fermer</a>
+            <br>
+            <h2>Le Film a bien été Ajouté</h2>
+            <br>
+        </div>
+    </div>
+
+    <div id="openModalModif" class="modalDialogModif">
+        <div>
+            <a href="#close" title="Close" class="close">Fermer</a>
+            <br>
+            <h2>Le Film a bien été Modifié</h2>
+            <br>
+        </div>
+    </div>
+
+
+    <div id="openModalSupp" class="modalDialogSupp">
+        <div>
+            <a href="#close" title="Close" class="close">Fermer</a>
+            <br>
+            <h2>Le Film a bien été Supprimé</h2>
+            <br>
+        </div>
+    </div>
+
+
+    <div id="openModalEdit" class="modalDialogEdit">
+        <div>
+            <a href="#close" title="Close" class="close">Fermer</a>
+            <br>
+            <div style="text-align: center;">
+                <h2>Modification</h2>
+            </div>
+            <form action="">
+                <input type="hidden" id="modalId" />
+                <input id="modalTitre" type="text" name="title" required minlength="1" maxlength="25" />
+                <input id="modalAnnee" type="number" name="annee" required min="1900" max="2019" />
+                <input id="modalAuteur" type="text" name="auteur" required minlength="5" maxlength="20" />
+            </form>
+            <br>
+            <br>
+            <div style="text-align: right;padding-right: 12px;">
+                <button type="button" name="button" onclick="requisModif('modalTitre','modalAnnee','modalAuteur')"
+                    class="btn-Modif" style="margin-bottom: 15px;">Modifier</button>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="keyApi.js"></script>
+    <script src="app.js"></script>
+
+
+
+
+
+    <script>
+        generateHTML();
+    </script>
+
+</body>
+
+</html>
