@@ -7,11 +7,11 @@
   }
 
 .titre{
-    font-size: 60px;
+    font-size: 65px;
     color: black;
 }
 .sousTitre{
-font-size: 45px;
+font-size: 50px;
 color: black;
 }
 
@@ -159,7 +159,8 @@ hr.basSousTitre{
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    max-height: 150vh;
     
     overflow-x: scroll;
     overflow-y: hidden;
@@ -190,7 +191,194 @@ hr.basSousTitre{
      color: black;
  }
  .link:hover{
-     color: aliceblue;
+     color: rgb(16, 98, 23);
  }
+ 
+
+ #slideshow {
+	margin: 0 auto;
+	padding-top: 50px;
+	height: 400px;
+	
+	background-color:rgb(161, 161, 161);
+	box-sizing: border-box;
+}
+
+.slideshow-title {
+	font-family: 'Allerta Stencil';
+	font-size: 62px;
+	color: #fff;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 25%;
+	letter-spacing: 3px;
+	font-weight: 300;
+}
+
+.sub-heading {
+	padding-top: 50px;
+	font-size: 27px;
+} .sub-heading-two {
+	font-size: 24px;
+} .sub-heading-three {
+	font-size: 21px;
+} .sub-heading-four {
+	font-size: 18px;
+} .sub-heading-five {
+	font-size: 15px;
+} .sub-heading-six {
+	font-size: 13px;
+} .sub-heading-seven {
+	font-size: 11px;
+} .sub-heading-eight {
+	font-size: 9px;
+} .sub-heading-nine {
+	font-size: 7px;
+}.sub-heading-ten {
+	font-size: 5px;
+}.sub-heading-eleven {
+	font-size: 3px;
+}.sub-heading-twelve {
+	font-size: 1px;
+}
+
+.entire-content {
+	margin: auto;
+	width: 150px;
+	perspective: 1000px;
+	position: relative;
+	padding-top: 80px;
+}
+
+.content-carrousel {
+	width: 100%;
+	position: absolute;
+	float: right;
+	animation: rotar 30s infinite linear;
+	transform-style: preserve-3d;
+}
+
+
+.content-carrousel:hover {
+	animation-play-state: paused;
+	cursor: pointer;
+}
+
+.content-carrousel figure {
+	width: 100%;
+	height: 120px;
+	border: 1px solid #3b444b;
+	overflow: hidden;
+	position: absolute;
+}
+
+.content-carrousel figure:nth-child(1) {
+	transform: rotateY(0deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(2) {
+	transform: rotateY(30deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(3) {
+	transform: rotateY(60deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(4) {
+	transform: rotateY(90deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(5) {
+	transform: rotateY(120deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(6) {
+	transform: rotateY(150deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(7) {
+	transform: rotateY(180deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(8) {
+	transform: rotateY(210deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(9) {
+	transform: rotateY(240deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(10) {
+	transform: rotateY(270deg) translateZ(300px); 
+}.content-carrousel figure:nth-child(11) {
+	transform: rotateY(300deg) translateZ(300px); 
+}.content-carrousel figure:nth-child(12) {
+	transform: rotateY(330deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(13) {
+	transform: rotateY(360deg) translateZ(300px); 
+}  
+
+.shadow {
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #000;
+    border-radius: 1px;
+}
+
+.content-carrousel img {
+	image-rendering: auto;
+	transition: all 300ms;
+	width: 100%;
+	height: 100%;
+}
+
+.content-carrousel img:hover {
+	transform: scale(1.2);
+	transition: all 300ms;
+}
+
+@keyframes rotar {
+	from {
+		transform: rotateY(0deg);
+	} to {
+		transform: rotateY(360deg);
+  }
+}
+
+dt{
+    color: #000;
+    font-size: 25px;
+    text-align: left;
+}
+
+dd{
+
+    color: rgb(44, 44, 44);
+    font-size: 20px;
+   
+}
+
+section.spoiler
+{
+    padding: 10px;
+    width: 100%;
+   
+    cursor: pointer;
+      
+   
+    display: block;
+      
+    padding: 3px;
+    min-height: 1.25em;
+}
   
+section.spoilerDiv
+{
+    width: 50%;
+    margin-left: 10px;
+    margin-right: auto;
+}
   
+section.contenuSpoiler
+{
+    display: none;
+}
+  
+.lienAfficher
+{
+    cursor: pointer;
+    display: none;
+}
+  
+.lienAfficher:hover
+{
+    text-decoration: underline;
+}
+
+.logo {
+
+    width: 60px;
+    margin: 15px;
+   
+}
