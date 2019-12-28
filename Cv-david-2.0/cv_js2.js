@@ -8,36 +8,58 @@ mailCv.addEventListener("click", function () { openMailer() });
 
 let twitterCv = document.getElementById("twitter");
 twitterCv.addEventListener("click", function() { twittercv() } );
+let twitterCv2 = document.getElementById("twitter2");
+twitterCv2.addEventListener("click", function() { twittercv() } );
 let githubCv = document.getElementById("github");
 githubCv.addEventListener("click", function() { githubcv() } );
+let githubCv2 = document.getElementById("github2");
+githubCv2.addEventListener("click", function() { githubcv() } );
 let facebookCv = document.getElementById("facebook");
 facebookCv.addEventListener("click", function() { facebookcv() });
+let facebookCv2 = document.getElementById("facebook2");
+facebookCv2.addEventListener("click", function() { facebookcv() });
 let linkedlnCv = document.getElementById("linkedln");
 linkedlnCv.addEventListener("click", function() { linkedlncv() });
+let linkedlnCv2 = document.getElementById("linkedln2");
+linkedlnCv2.addEventListener("click", function() { linkedlncv() });
 let instagramCv = document.getElementById("instagram");
 instagramCv.addEventListener("click", function() { instragramcv() });
+let instagramCv2 = document.getElementById("instagram2");
+instagramCv2.addEventListener("click", function() { instragramcv() });
 let discordCv = document.getElementById("discord");
 discordCv.addEventListener("click", function() { discordcv() });
-
+let discordCv2 = document.getElementById("discord2");
+discordCv2.addEventListener("click", function() { discordcv() });
+let cvPdf = document.getElementById("cvPdf");
+cvPdf.addEventListener("click", function() { pdfcv() })
 
 
 function twittercv() {
     document.getElementById("twitter").href = "https://twitter.com/anima57c";
+    document.getElementById("twitter2").href = "https://twitter.com/anima57c";
 }
 function githubcv() {
     document.getElementById("github").href = "https://github.com/chauvet57";
+    document.getElementById("github2").href = "https://github.com/chauvet57";
 }
 function facebookcv() {
     document.getElementById("facebook").href = "https://www.facebook.com/david.chauvet.391";
+    document.getElementById("facebook2").href = "https://www.facebook.com/david.chauvet.391";
 }
 function linkedlncv() {
     document.getElementById("linkedln").href = "https://www.linkedin.com/in/david-chauvet-500764193/";
+    document.getElementById("linkedln2").href = "https://www.linkedin.com/in/david-chauvet-500764193/";
 }
 function instragramcv() {
     document.getElementById("instagram").href = "https://www.instagram.com/chauvet_david/?hl=fr";
+    document.getElementById("instagram2").href = "https://www.instagram.com/chauvet_david/?hl=fr";
 }
 function discordcv() {
     document.getElementById("discord").href = "https://discord.gg/VJKfY9";
+    document.getElementById("discord2").href = "https://discord.gg/VJKfY9";
+}
+function pdfcv(){
+    document.getElementById("cvPdf").href = "./contact/cv CDA.pdf";
 }
 
 /**
@@ -84,6 +106,7 @@ function openMailer() {
         + part5 + ">" + part1 + part6 + part3 + part4;
 
 };
+
 
 $(document).ready(function () {
     $('.js-scrollTo').on('click', function () { // Au clic sur un élément
